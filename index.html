@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>امیر گیمر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🎮</div>
+      <div>
+        <div class="brand-title">امیر گیمر</div>
+        <div class="brand-sub">Gaming • News • Profile</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-btn" data-tab="profile">پروفایل</button>
+      <button class="nav-btn" data-tab="games">بازی‌ها</button>
+      <button class="nav-btn" data-tab="news">اخبار</button>
+      <a class="nav-btn" href="contact.html">ارتباط</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="hero-title">
+          وارد دنیای <span class="neon">امیر گیمر</span> شو!
+        </h1>
+        <p class="hero-text">
+          اینجا آخرین خبرها، بازی‌های پیشنهادی و پروفایل گیمرها رو می‌ذاری.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#profile">رفتن به پروفایل</a>
+          <button class="btn ghost" id="btnPing">فعال کن حالت خفن 😎</button>
+        </div>
+        <div class="hint">* روی دکمه‌ها بزن تا تب‌ها عوض بشن.</div>
+      </div>
+
+      <div class="hero-card" id="heroCard">
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-num" id="stat1">0</div>
+            <div class="stat-label">بازدید</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">12</div>
+            <div class="stat-label">پست</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">5</div>
+            <div class="stat-label">بازی</div>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <input id="search" type="text" placeholder="جستجو بین بازی‌ها..." />
+          <button class="search-btn" id="searchBtn">جستجو</button>
+        </div>
+
+        <div class="perk">
+          <span class="perk-dot"></span>
+          <span>انیمیشن + تب‌بندی + استایل نئونی</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="panel">
+      <div class="tab" id="tab-profile">
+        <h2 class="sec-title">پروفایل</h2>
+
+        <div class="profile-grid">
+          <div class="card">
+            <div class="avatar">A</div>
+            <div class="card-title">امیر گیمر</div>
+            <div class="card-text">گیمینگ روزانه + اخبار داغ + پیشنهاد بازی</div>
+            <div class="chips">
+              <span class="chip">FPS</span>
+              <span class="chip">Mobile</span>
+              <span class="chip">News</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">آمار سریع</div>
+            <div class="list">
+              <div class="list-item"><span>تیم:</span> <b>Solo</b></div>
+              <div class="list-item"><span>هدف:</span> <b>تفریح + پیشرفت</b></div>
+              <div class="list-item"><span>سبک:</span> <b>نئونی 😈</b></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tab hidden" id="tab-games">
+        <h2 class="sec-title">بازی‌ها</h2>
+
+        <div class="game-grid" id="gameGrid">
+          <div class="game-card" data-game="pubg">
+            <div class="game-title">PUBG</div>
+            <div class="game-desc">نبرد سریع + استراتژی</div>
+            <button class="game-btn" onclick="alert('این دکمه آماده است!')">اطلاعات</button>
+          </div>
+
+          <div class="game-card" data-game="freefire">
+            <div class="game-title">Free Fire</div>
+            <div class="game-desc">حرکت سریع + هیجان</div>
+            <button class="game-btn" onclick="alert('این دکمه آماده است!')">اطلاعات</button>
+          </div>
+
+          <div class="game-card" data-game="fc">
+            <div class="game-title">FC Mobile</div>
+            <div class="game-desc">تیم‌سازی و نبردهای هیجان‌انگیز</div>
+            <button class="game-btn" onclick="alert('این دکمه آماده است!')">اطلاعات</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab hidden" id="tab-news">
+        <h2 class="sec-title">اخبار</h2>
+
+        <div class="news-grid">
+          <article class="news">
+            <h3>آپدیت جدید رسید!</h3>
+            <p>امروز آپدیت بازی محبوبت اومد. آماده‌ای؟</p>
+            <a class="link" href="#">بیشتر</a>
+          </article>
+
+          <article class="news">
+            <h3>ترفند حرفه‌ای</h3>
+            <p>یک نکته کوچک که بردت رو زیاد می‌کنه.</p>
+            <a class="link" href="#">بیشتر</a>
+          </article>
+
+          <article class="news">
+            <h3>پیشنهاد هفته</h3>
+            <p>این بازی رو از دست نده، خیلی جذابه.</p>
+            <a class="link" href="#">بیشتر</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 2026 Amir Gamer</div>
+      <div class="footer-right">ساخته شده با استایل نئونی 🎮</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
